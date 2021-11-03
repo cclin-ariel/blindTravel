@@ -1,0 +1,29 @@
+// Variables
+//
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+
+
+// scss-docs-start color-variables
+$blue:    #0d6efd !default;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #d63384 !default;
+$red:     #dc3545 !default;
+$orange:  #fd7e14 !default;
+$yellow:  #ffc107 !default;
+$green:   #198754 !default;
+$teal:    #20c997 !default;
+$cyan:    #0dcaf0 !default;
+$bldGreen:    #7CA23C !default;
+// scss-docs-end color-variables
+
+
+
+// scss-docs-start theme-colors-map
+$theme-colors: (
+  "bldGreen":   $bldGreen
+
+) !default;
+// scss-docs-end theme-colors-map
+
