@@ -1,7 +1,7 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-import Landing from '../components/page/Landing.vue'
-import SearchResult from '../components/page/SearchResult.vue'
-import Detail from '../components/page/Detail.vue'
+import Landing from '@/components/Landing.vue'
+import SearchResult from '@/components/SearchResult.vue'
+import Detail from '@/components/Detail.vue'
 
 const routes = [
   {

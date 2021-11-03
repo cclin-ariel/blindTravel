@@ -17,16 +17,23 @@
       </div>
     </div>
     <div v-if="!titleShowing">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/searchResult">Search</router-link>
+      <SearchBar />
+      <ImageGallery />
+      <Footer />
+      <!-- <router-link to="/">Home</router-link> |
+      <router-link to="/searchResult">Search</router-link> -->
     </div>
   </div>
 </template>
 <script>
+import ImageGallery from "./ImageGallery.vue"; 
+import SearchBar from "./SearchBar.vue";
+import Footer from "./Footer.vue"; 
+
 export default {
   components: {
-    SearchBar,
     ImageGallery,
+    SearchBar,
     Footer,
   },
   data() {
