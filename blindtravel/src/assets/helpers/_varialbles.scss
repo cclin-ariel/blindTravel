@@ -1511,9 +1511,9 @@ $list-group-action-active-bg:       $gray-200 !default;
 // Image thumbnails
 
 // scss-docs-start thumbnail-variables
-$thumbnail-padding:                 .25rem !default;
+$thumbnail-padding:                 0rem !default;
 $thumbnail-bg:                      $body-bg !default;
-$thumbnail-border-width:            $border-width !default;
+$thumbnail-border-width:            0rem !default;
 $thumbnail-border-color:            $gray-300 !default;
 $thumbnail-border-radius:           $border-radius !default;
 $thumbnail-box-shadow:              $box-shadow-sm !default;

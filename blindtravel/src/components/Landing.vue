@@ -26,14 +26,14 @@
   </div>
 </template>
 <script>
-import ImageGallery from "./ImageGallery.vue"; 
 import SearchBar from "./SearchBar.vue";
+import ImageGallery from "./ImageGallery.vue"; 
 import Footer from "./Footer.vue"; 
 
 export default {
   components: {
-    ImageGallery,
     SearchBar,
+    ImageGallery,
     Footer,
   },
   data() {
