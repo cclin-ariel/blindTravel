@@ -1,8 +1,8 @@
 <template>
   <div>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+    <nav class="navbar shadow navbar-expand-md fixed-top mx-5 mt-3 rounded">
       <div class="container-fluid">
-        LOGO
+        <span>LOGO</span>
         <a class="navbar-brand text-bldGreen" href="#"> 盲選小旅行</a>
         <button
           class="navbar-toggler"
@@ -19,14 +19,14 @@
           <ul class="navbar-nav me-auto mb-2 mb-md-0"></ul>
           <form class="d-flex">
             <input
-              class="form-control-s me-2"
+              class="form-control-s me-2 ps-2"
               type="search"
               placeholder="搜尋縣市"
               aria-label="搜尋縣市"
             />
             <button class="btn btn-outline-primary" type="submit">搜尋</button>
           </form>
-          <p class="text-black-50 my-auto">或是...</p>
+          <p class="text-black-50 my-auto px-2">或是...</p>
 
           <button class="btn btn-bldGreen text-white" type="submit">
             試試手氣！
