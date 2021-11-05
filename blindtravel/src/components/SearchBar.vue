@@ -1,6 +1,8 @@
 <template>
   <div>
-    <nav class="navbar shadow navbar-expand-md fixed-top rounded bg-white">
+    <nav
+      class="navbar shadow navbar-expand-md fixed-top rounded bg-white mx-auto"
+    >
       <div class="container-fluid">
         <span>LOGO</span>
         <!-- <div class="collapse navbar-collapse" id="navbarCollapse"> -->
@@ -73,17 +75,26 @@ input {
   .bd-placeholder-img-lg {
     font-size: 3.5rem;
   }
+  .box {
+    /* width: 100%;
+
+    display: flex;
+    justify-content: center; */
+  }
   nav {
     margin: 20px 40px;
+    max-width: 1200px;
+    /* display: flex;
+
+    justify-content: center; */
   }
   input {
-  width: 200px;
-}
+    width: 200px;
+  }
   p.text-black-50.my-auto.px-2,
   .navbar-brand {
     visibility: visible;
-      width: 60px;
-
+    width: 60px;
   }
 }
 </style>
