@@ -1,6 +1,7 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import Landing from '@/components/Landing.vue'
 import SearchResult from '@/components/SearchResult.vue'
+import SearchResultFeelingLucky from '@/components/SearchResultFeelingLucky.vue'
 import Detail from '@/components/Detail.vue'
 
 const routes = [
@@ -13,6 +14,11 @@ const routes = [
     path: '/searchResult',
     name: 'SearchResult',
     component: SearchResult
+  },
+  {
+    path: '/searchResultFeelingLucky',
+    name: 'SearchResultFeelingLucky',
+    component: SearchResultFeelingLucky
   },
   {
     path: '/detail',
