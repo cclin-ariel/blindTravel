@@ -4,6 +4,7 @@
       <nav class="navbar shadow navbar-expand-md rounded bg-white mx-auto px-0">
         <div class="container-fluid">
           <div class="logo pe-2">
+            <a href="#">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="31.914"
@@ -41,8 +42,9 @@
                 />
               </g>
             </svg>
+            </a>
           </div>
-          <a class="navbar-brand text-bldGreen" href="#"> 盲選小旅行</a>
+          <a class="navbar-brand text-bldGreen" href="#">盲選小旅行</a>
 
           <ul class="navbar-nav me-auto mb-2 mb-md-0"></ul>
 
@@ -84,17 +86,13 @@ export default {
 
   data() {
     return {
-      // isRandom: "",
     };
   },
 
   mounted() {},
 
   methods: {
-    // sendRadomToResultpage(isRandom) {
-    //   console.log("isRandom:", isRandom);
-    //   this.$emit("emit-value-update", isRandom);
-    // },
+
   },
 };
 </script>
