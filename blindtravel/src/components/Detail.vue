@@ -104,6 +104,14 @@ export default {
       IDFromImgGallery: "",
     };
   },
+  watch: {
+    $route(to, from) {
+      if (to !== from) {
+        location.reload();
+        this.getdetailByID();
+      }
+    },
+  },
   created() {
     this.IDFromImgGallery = this.$route.params.id;
     this.getdetailByID();
@@ -124,7 +132,7 @@ export default {
           [vm.spot] = response.data;
           vm.tempCity = vm.spot.City;
           // console.log(vm.tempCity);
-          
+
           // console.log("getdetailByID", vm.spot);
         })
         .catch(function (error) {

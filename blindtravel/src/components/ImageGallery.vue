@@ -1,7 +1,6 @@
 <template>
   <div>
     <div>
-      {{ updateCityImage }}
       <div class="row">
         <router-link
           v-for="spot in imageSpots"
@@ -37,7 +36,7 @@ export default {
   data() {
     return {
       tempSpots: [],
-      imageSpots: [],
+      imageSpots: [],// v-for
       tempID: "",
       cityList: [
         {
@@ -137,14 +136,17 @@ export default {
   },
   careated() {},
   mounted() {
-    console.log(this.updateCityImage);
+    console.log(this.updateCityImage, 'test');
 
-    if (this.updateCityImage === "none") {
+    if (this.updateCityImage) {
       this.getSpotImage();
     }
   },
   methods: {
     getSpotImage() {
+
+      console.log('123');
+      
       const vm = this;
       const axios = require("axios");
       //get random image
@@ -173,7 +175,7 @@ export default {
       }
       //get city image
       else if (this.updateCityImage !== "none") {
-        console.log("updateCityImage", this.updateCityImage);
+        // console.log("updateCityImage", this.updateCityImage);
 
         this.enCity = this.cityTranslateing(this.updateCityImage);
         const citySpotsApi = `https://ptx.transportdata.tw/MOTC/v2/Tourism/ScenicSpot/${vm.enCity}?$top=60&$format=JSON`;

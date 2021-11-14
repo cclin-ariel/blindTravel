@@ -11,7 +11,7 @@ const routes = [
     component: Landing
   },
   {
-    path: '/searchResult',
+    path: '/searchResult/:city',
     name: 'SearchResult',
     component: SearchResult
   },

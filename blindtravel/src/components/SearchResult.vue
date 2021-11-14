@@ -6,12 +6,12 @@
       </div>
       <div class="result-title mx-auto text-center my-5 pt-5">
         <div class="city-title fs-3">
-          <span class="text-bldGreen">台北市</span> 的搜尋結果
+          <span class="text-bldGreen">{{ city }}</span> 的搜尋結果
         </div>
-        <div class="spot-num mt-2">總共 329 個景點</div>
+        <!-- <div class="spot-num mt-2">總共 329 個景點</div> -->
       </div>
     </div>
-    <ImageGallery />
+    <ImageGallery :updateCityImage="city" />
     <Footer />
   </div>
 </template>
@@ -28,17 +28,18 @@ export default {
   },
   data() {
     return {
-      // isRandomShowing: "",
+      city: "",
     };
   },
-  methods: {
-    // toggleRandomText(valueFromSearchBar) {
-    //   const vm = this;
-    //   vm.isRandomShowing = valueFromSearchBar;
-    //   console.log(vm.isRandomShowing);
-      
-    // },
+  created() {
+    this.city = this.$route.params.city;
   },
+  watch:{    $route(to, from) {
+      if (to !== from) {
+        location.reload();
+      }
+    },},
+  methods: {},
 };
 </script>
 <style scoped>
