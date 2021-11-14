@@ -127,6 +127,7 @@ export default {
   mounted() {
     this.getSpotImage();
   },
+  
   methods: {
     getSpotImage() {
       const vm = this;

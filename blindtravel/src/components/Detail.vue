@@ -44,7 +44,7 @@
               </div>
               <div class="col-11 border-left">
                 <p class="my-auto">
-                  <a :href="`${spot.Phone}`" class="text-decoration-none">{{
+                  <a :href="spot.Phone" class="text-decoration-none">{{
                     spot.Phone
                   }}</a>
                 </p>
@@ -126,7 +126,7 @@ export default {
 
       axios
         .get(api, {
-          headers: this.getAuthorizationHeader(),
+          headers: vm.getAuthorizationHeader(),
         })
         .then((response) => {
           [vm.spot] = response.data;
@@ -138,7 +138,7 @@ export default {
         .catch(function (error) {
           console.log(error);
         });
-      this.getAuthorizationHeader();
+      vm.getAuthorizationHeader();
     },
 
     getAuthorizationHeader() {

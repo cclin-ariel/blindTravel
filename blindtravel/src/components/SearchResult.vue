@@ -34,11 +34,13 @@ export default {
   created() {
     this.city = this.$route.params.city;
   },
-  watch:{    $route(to, from) {
+  watch: {
+    $route(to, from) {
       if (to !== from) {
         location.reload();
       }
-    },},
+    },
+  },
   methods: {},
 };
 </script>

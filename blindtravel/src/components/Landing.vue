@@ -20,9 +20,7 @@
       <div class="fixed-top">
         <SearchBar />
       </div>
-      <ImageGallery :isLoading="isLoading" updateCityImage="none"/>
-      <!-- <router-link to="/">Home</router-link> |
-      <router-link to="/searchResult">Search</router-link> -->
+      <ImageGallery :isLoading="isLoading" updateCityImage="none" />
     </div>
   </div>
 </template>

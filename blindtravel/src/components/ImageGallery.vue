@@ -36,7 +36,7 @@ export default {
   data() {
     return {
       tempSpots: [],
-      imageSpots: [],// v-for
+      imageSpots: [], // v-for
       tempID: "",
       cityList: [
         {
@@ -136,17 +136,12 @@ export default {
   },
   careated() {},
   mounted() {
-    console.log(this.updateCityImage, 'test');
-
     if (this.updateCityImage) {
       this.getSpotImage();
     }
   },
   methods: {
     getSpotImage() {
-
-      console.log('123');
-      
       const vm = this;
       const axios = require("axios");
       //get random image
@@ -154,7 +149,7 @@ export default {
         console.log("updateCityImage", vm.updateCityImage);
 
         const allSpotsApi =
-          "https://ptx.transportdata.tw/MOTC/v2/Tourism/ScenicSpot?$format=JSON";
+          "https://ptx.transportdata.tw/MOTC/v2/Tourism/ScenicSpot?$top=200&$format=JSON";
         axios
           .get(allSpotsApi, {
             headers: vm.getAuthorizationHeader(),
@@ -202,7 +197,7 @@ export default {
     cityTranslateing(chCity) {
       // const vm = this;
       const result = this.cityList.filter((city) => city.chinese === chCity)[0];
-      console.log("cityTranslateing", result.english);
+      // console.log("cityTranslateing", result.english);
 
       if (result.english) {
         return result.english;

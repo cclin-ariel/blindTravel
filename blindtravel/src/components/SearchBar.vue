@@ -49,12 +49,6 @@
           <ul class="navbar-nav me-auto mb-2 mb-md-0"></ul>
 
           <form class="d-flex">
-            <!-- <input
-              class="form-control-s me-2 ps-2 Noto-Sans"
-              type="search"
-              placeholder="搜尋縣市"
-              aria-label="搜尋縣市"
-            /> -->
             <select
               class="form-select me-2 ps-2 Noto-Sans form-select-sm"
               aria-label="Default select example"
@@ -69,23 +63,27 @@
                 {{ city.chinese }}
               </option>
             </select>
-            <router-link :to="`/searchResult/${city}`">
+            <div>
               <button
                 class="search-btn btn btn-outline-primary Noto-Sans px-2"
                 type="submit"
+                @click="citySearch"
               >
                 搜尋
               </button>
-            </router-link>
+            </div>
           </form>
           <div class="ps-2">
             <p class="OR text-black-50 my-auto">或是...</p>
           </div>
-          <router-link :to="'/searchResultFeelingLucky'">
-            <button class="btn btn-bldGreen text-white Noto-Sans px-2">
+          <div>
+            <button
+              class="btn btn-bldGreen text-white Noto-Sans px-2"
+              @click="luckyTryAgain"
+            >
               試試手氣！
             </button>
-          </router-link>
+          </div>
         </div>
       </nav>
     </div>
@@ -189,17 +187,27 @@ export default {
       ],
     };
   },
-  watch: {
-    // city() {
-    //   console.log("city", this.city);
-    // },
+  mounted() {
+    console.log(this.$route.name);
   },
-  mounted() {},
-
   methods: {
     updateValue(e) {
       this.city = e.target.value;
       console.log(this.city);
+    },
+    citySearch() {
+      if (!this.city) {
+        return;
+      } else {
+        this.$router.push(`/searchResult/${this.city}`);
+      }
+    },
+    luckyTryAgain() {
+      if (this.$route.name === "SearchResultFeelingLucky") {
+        window.location.reload();
+      } else {
+        this.$router.push("/SearchResultFeelingLucky");
+      }
     },
   },
 };
@@ -213,9 +221,9 @@ nav p {
   display: none;
   width: 5px;
 }
-input {
-  width: 130px;
-}
+.search-btn {
+    min-width: 50px;
+  }
 @media (min-width: 768px) {
   .bd-placeholder-img-lg {
     font-size: 3.5rem;
