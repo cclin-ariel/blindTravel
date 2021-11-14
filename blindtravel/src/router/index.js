@@ -21,7 +21,7 @@ const routes = [
     component: SearchResultFeelingLucky
   },
   {
-    path: '/detail',
+    path: '/detail/:id',
     name: 'Detail',
     component: Detail
   },

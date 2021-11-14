@@ -17,9 +17,10 @@
       </div>
     </div>
     <div v-if="!titleShowing">
-      <SearchBar />
-      <ImageGallery />
-      <Footer />
+      <div class="fixed-top">
+        <SearchBar />
+      </div>
+      <ImageGallery :isLoading="isLoading" updateCityImage="none"/>
       <!-- <router-link to="/">Home</router-link> |
       <router-link to="/searchResult">Search</router-link> -->
     </div>
@@ -27,28 +28,27 @@
 </template>
 <script>
 import SearchBar from "./SearchBar.vue";
-import ImageGallery from "./ImageGallery.vue"; 
-import Footer from "./Footer.vue"; 
+import ImageGallery from "./ImageGallery.vue";
 
 export default {
   components: {
     SearchBar,
     ImageGallery,
-    Footer,
   },
   data() {
     return {
       titleShowing: true,
+      isLoading: true,
     };
   },
   methods: {
-    showing() {
+    showingFirstImpression() {
       const vm = this;
-      window.setTimeout(() => (vm.titleShowing = false), 2000);
+      window.setTimeout(() => (vm.titleShowing = false), 1500);
     },
   },
   mounted() {
-    this.showing();
+    this.showingFirstImpression();
   },
 };
 </script>
