@@ -8,7 +8,7 @@
           class="col-md-2 col-sm-4 photo"
           :to="`/detail/${spot.ID}`"
         >
-          <div class="title">
+          <div class="shadow">
             <p>{{ spot.Name }}</p>
             <p>{{ spot.City }}</p>
           </div>
