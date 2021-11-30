@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<!-- saved from url=(0179)https://codepen.io/Vue/embed/PoqyJVE?theme-id=39028&editable=true&height=300&default-tab=result&user=Vue&slug-hash=PoqyJVE&pen-title=Handling%20forms%3A%20checkbox&name=cp_embed_3 -->
+<html lang="en" class="mac chrome95 js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width">
+<title>CodePen Embed - Handling forms: checkbox</title>
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="jydWcR7jl1IDAF/HGH06VgLm/jXxcu1sIsnVpBFZHiJAiBJPiwXc/2Oq0gkB7peznH8E6tn1TYt/1E7FJKb6oQ==">
+<link rel="stylesheet" media="all" href="./embed-a597cbe50c093a5ab46947b89753b103d8d51022d1dd6e8246ddac4acb697dd7.css">
+<style>
+    .hide {
+      display: none !important;
+    }
+
+    #result-box {
+      background: #fdfdfd;
+      color: #000000;
+    }
+    .embed-footer,
+    .embed-nav {
+      background: #fdfdfd;
+      
+    }
+    .embed-nav .code-types a,
+    .embed-nav .result-button-list a,
+    .action-button {
+      color: #000000;
+      background-color: #ebebeb;
+    }
+    .embed-nav .code-types a.active,
+    .embed-nav .result-button-list a.active,
+    .action-button.active {
+      background: #d6d6d6;
+      color: #000701;
+      box-shadow: inset 0px 3px #64ba93;
+    }
+    .embed-nav .logo-wrap .edit-on-codepen {
+      color: #282728;
+    }
+
+    .embed-nav svg {
+      stroke: #282728 !important;
+    }
+  </style>
+<link rel="stylesheet" media="all" href="./highcontrast-light-3619df70fc92525a309ae690b3b8e29ff88934936c7fd9606f517e4cf37efc07.css">
+<link rel="stylesheet" href="./11ddd743cc449a07c6d582adcf569dfc">
+<meta name="monetization" content="$ilp.uphold.com/biyqg2MkQKbe">
+</head>
+<body id="the-body" style="border: 1px solid #c6c6c6; --borderWidth: 1px;" class="codepen-embed-body results-active">
+<nav class="embed-nav group" id="embed-nav">
+<ul class="code-types">
+<li class="code-type">
+<a id="html-link" href="https://codepen.io/Vue/embed/PoqyJVE?theme-id=39028&amp;editable=true&amp;height=300&amp;default-tab=result&amp;user=Vue&amp;slug-hash=PoqyJVE&amp;pen-title=Handling%20forms%3A%20checkbox&amp;name=cp_embed_3#html-box" role="button" aria-pressed="false">
+HTML
+</a>
+</li>
+<li class="code-type">
+<a id="css-link" href="https://codepen.io/Vue/embed/PoqyJVE?theme-id=39028&amp;editable=true&amp;height=300&amp;default-tab=result&amp;user=Vue&amp;slug-hash=PoqyJVE&amp;pen-title=Handling%20forms%3A%20checkbox&amp;name=cp_embed_3#css-box" role="button" aria-pressed="false">
+CSS
+</a>
+</li>
+<li class="code-type">
+<a id="js-link" href="https://codepen.io/Vue/embed/PoqyJVE?theme-id=39028&amp;editable=true&amp;height=300&amp;default-tab=result&amp;user=Vue&amp;slug-hash=PoqyJVE&amp;pen-title=Handling%20forms%3A%20checkbox&amp;name=cp_embed_3#js-box" role="button" aria-pressed="false">
+JS
+</a>
+</li>
+</ul>
+<ul class="result-button-list">
+<li class="results results-type">
+<a id="result-link" href="https://codepen.io/Vue/embed/PoqyJVE?theme-id=39028&amp;editable=true&amp;height=300&amp;default-tab=result&amp;user=Vue&amp;slug-hash=PoqyJVE&amp;pen-title=Handling%20forms%3A%20checkbox&amp;name=cp_embed_3#result-box" class="active" aria-pressed="true" role="button">
+Result
+</a>
+</li>
+<li>
+<a href="https://codepen.io/Vue/embed/PoqyJVE?theme-id=39028&amp;editable=true&amp;height=300&amp;default-tab=result&amp;user=Vue&amp;slug-hash=PoqyJVE&amp;pen-title=Handling%20forms%3A%20checkbox&amp;name=cp_embed_3#resources-link" id="skip-results-iframe-link">Skip Results Iframe</a>
+</li>
+</ul>
+<div class="logo-wrap" id="edit-area">
+<a class="edit-on-codepen" target="_blank" rel="noopener" href="https://codepen.io/team/Vue/pen/PoqyJVE" title="Edit on CodePen">
+<div class="large-logo">
+<span id="edit-on-text" class="open-on">EDIT ON</span>
+<svg id="embed-codepen-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138 26" fill="none" stroke="#000" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="CodePen">
+<path d="M80 6h-9v14h9m34-14h-9v14h9m-3-7h-6m-28 0h-6m51 7V6l11 14V6M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24m55-10h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14M15 8c-1.3-1.3-3-2-5-2-4 0-7 3-7 7s3 7 7 7c2 0 3.7-.8 5-2m49-5c0 4-3 7-7 7h-5V6h5c4 0 7 3 7 7z"></path>
+</svg>
+</div>
+<div class="box-logo">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 0 26 26" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" role="img" aria-label="Edit on CodePen">
+<path id="icon-codepen-box" d="M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24"></path>
+</svg>
+</div>
+</a>
+</div>
+</nav>
+<div id="output" data-border-style="thin" data-header="true">
+<div id="html-box" class="code-wrap code-box box " role="region" aria-label="HTML">
+<div class="editable-badge">
+Live
+</div>
+<div class="CodeMirror cm-s-default CodeMirror-wrap CodeMirror-simplescroll"><div style="overflow: hidden; position: relative; width: 3px; height: 0px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-simplescroll-horizontal" cm-not-content="true" style="display: none;"><div></div></div><div class="CodeMirror-simplescroll-vertical" cm-not-content="true" style="display: block; bottom: 0px;"><div style="height: 10px; top: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; padding-right: 9px; padding-bottom: 0px;"><div style="position: relative;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre class="CodeMirror-line-like"><span>xxxxxxxxxx</span></pre><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>4</div></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors"></div><div class="CodeMirror-code" role="presentation"></div></div></div></div></div><div style="position: absolute; height: 50px; width: 1px; border-bottom: 0px solid transparent;"></div><div class="CodeMirror-gutters"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 1px;"></div><div class="CodeMirror-gutter CodeMirror-foldgutter"></div></div></div></div>
+</div>
+<div id="css-box" class="code-wrap code-box box " role="region" aria-label="CSS">
+<div class="editable-badge">
+Live
+</div>
+<div class="CodeMirror cm-s-default CodeMirror-wrap CodeMirror-simplescroll"><div style="overflow: hidden; position: relative; width: 3px; height: 0px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-simplescroll-horizontal" cm-not-content="true" style="display: none;"><div></div></div><div class="CodeMirror-simplescroll-vertical" cm-not-content="true" style="display: block; bottom: 0px;"><div style="height: 10px; top: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; padding-right: 9px; padding-bottom: 0px;"><div style="position: relative;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre class="CodeMirror-line-like"><span>xxxxxxxxxx</span></pre><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>10</div></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors"></div><div class="CodeMirror-code" role="presentation"></div></div></div></div></div><div style="position: absolute; height: 50px; width: 1px; border-bottom: 0px solid transparent;"></div><div class="CodeMirror-gutters"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 1px;"></div><div class="CodeMirror-gutter CodeMirror-foldgutter"></div></div></div></div>
+</div>
+<div id="js-box" class="code-wrap code-box box " role="region" aria-label="JS">
+<div class="editable-badge">
+Live
+</div>
+<div class="CodeMirror cm-s-default CodeMirror-wrap CodeMirror-simplescroll"><div style="overflow: hidden; position: relative; width: 3px; height: 0px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-simplescroll-horizontal" cm-not-content="true" style="display: none;"><div></div></div><div class="CodeMirror-simplescroll-vertical" cm-not-content="true" style="display: block; bottom: 0px;"><div style="height: 10px; top: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; padding-right: 9px; padding-bottom: 0px;"><div style="position: relative;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre class="CodeMirror-line-like"><span>xxxxxxxxxx</span></pre><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>7</div></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors"></div><div class="CodeMirror-code" role="presentation"></div></div></div></div></div><div style="position: absolute; height: 50px; width: 1px; border-bottom: 0px solid transparent;"></div><div class="CodeMirror-gutters"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 1px;"></div><div class="CodeMirror-gutter CodeMirror-foldgutter"></div></div></div></div>
+</div>
+<div id="result-box" class="code-box active zoom-1" role="region" aria-label="Result">
+<iframe allow="accelerometer; camera; encrypted-media; display-capture; geolocation; gyroscope; microphone; midi; clipboard-read; clipboard-write" allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="result-iframe  " frameborder="0" id="result-iframe" loading="lazy" name="CodePen Preview for Handling forms: checkbox" sandbox="allow-downloads allow-forms allow-modals allow-pointer-lock allow-popups allow-presentation allow-same-origin allow-scripts allow-top-navigation-by-user-activation" scrolling="yes" title="CodePen Preview for Handling forms: checkbox" data-src="https://cdpn.io/team/Vue/fullembedgrid/PoqyJVE?animations=run&amp;type=embed" src="./PoqyJVE(1).html">
+  </iframe>
+</div>
+<div id="about-box">
+<div class="about-container">
+<div class="about-user">
+<a href="https://codepen.io/team/Vue" target="_blank" rel="noopener"><img src="./default.png" loading="lazy" alt="" class="about-image"></a>
+<div class="about-user-info">
+<p>
+This Pen is owned by <a href="https://codepen.io/team/Vue" target="_blank" rel="noopener">Vue</a> on <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a>.
+</p>
+<p>
+<a href="https://codepen.io/team/Vue" target="_blank" rel="noopener" class="about-user-more">
+See more by @Vue on CodePen
+</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="resources-box" class="resources-box">
+<h3>External CSS</h3>
+<p>
+This Pen doesn't use any external CSS resources.
+</p>
+<h3>External JavaScript</h3>
+<ol class="list-of-resources">
+<li>
+<a href="https://unpkg.com/vue@next" target="_blank">https://unpkg.com/vue@next</a>
+</li>
+</ol>
+</div>
+</div>
+<footer class="embed-footer" id="embed-footer">
+<button id="resources-link" class="resources-link action-button bottom left" href="#resources-box" aria-pressed="false" role="button">
+Resources
+</button>
+<ul class="scaling-choices bottom right">
+<li><button class="action-button" id="zoom-button-1">1×</button></li>
+<li><button class="action-button" id="zoom-button-05">0.5×</button></li>
+<li><button class="action-button" id="zoom-button-025">0.25×</button></li>
+</ul>
+<button id="rerun-button" class="action-button rerun-button bottom right">
+Rerun
+</button>
+</footer>
+<textarea id="init-data" style="display:none">{"__browser":{"device":"unknown_device","mobile":false,"name":"chrome","platform":"mac","version":"95"},"__constants":{"gridIframeSandboxAttributes":"allow-forms allow-modals allow-pointer-lock allow-presentation allow-same-origin allow-scripts"},"__CPDATA":{"domain_iframe":"https://cdpn.io","environment":"production","host":"codepen.io","iframe_allow":"accelerometer; camera; encrypted-media; display-capture; geolocation; gyroscope; microphone; midi; clipboard-read; clipboard-write","iframe_sandbox":"allow-downloads allow-forms allow-modals allow-pointer-lock allow-popups allow-presentation allow-same-origin allow-scripts allow-top-navigation-by-user-activation"},"__graphql":{"data":null,"errors":[{"message":"Cannot return null for non-nullable field Query.sessionUser"}]},"__pay_stripe_public":"pk_NgCjQmQs7wXOFmfNC0LKMgEkmlThn","__pay_braintree_env":"production","__boomboom":{"serve_url":"https://cdpn.io/cp/internal/boomboom","store_url":"https://codepen.io/cp/internal/boomboom/store"},"__pageType":"embed","__item":"{\"editor_settings\":{\"auto_run\":true,\"autocomplete\":false,\"code_folding\":true,\"css_pre_processor\":\"none\",\"css_prefix\":\"neither\",\"css_starter\":\"neither\",\"emmet_active\":true,\"font_size\":\"14\",\"font_type\":\"monaco\",\"format_on_save\":false,\"html_pre_processor\":\"none\",\"indent_with\":\"spaces\",\"js_pre_processor\":\"none\",\"key_bindings\":\"normal\",\"line_numbers\":true,\"line_wrapping\":true,\"match_brackets\":true,\"snippets\":{\"markupSnippets\":{},\"stylesheetSnippets\":{}},\"tab_size\":\"2\",\"theme\":\"twilight\",\"id\":\"PoqyJVE\",\"auto_save\":true},\"hashid\":\"PoqyJVE\",\"itemType\":\"pen\",\"resources\":[{\"url\":\"https://unpkg.com/vue@next\",\"order\":0,\"resource_type\":\"js\",\"par_content\":\"\"}],\"tags\":[],\"id\":43572887,\"user_id\":1443431,\"html\":\"&lt;div id=\\\"v-model-checkbox\\\" class=\\\"demo\\\"&gt;\\n  &lt;input type=\\\"checkbox\\\" id=\\\"checkbox\\\" v-model=\\\"checked\\\" /&gt;\\n  &lt;label for=\\\"checkbox\\\"&gt;{{ checked }}&lt;/label&gt;\\n&lt;/div&gt;\",\"css\":\".demo {\\n  font-family: sans-serif;\\n  border: 1px solid #eee;\\n  border-radius: 2px;\\n  padding: 20px 30px;\\n  margin-top: 1em;\\n  margin-bottom: 40px;\\n  user-select: none;\\n  overflow-x: auto;\\n}\",\"parent\":43417830,\"js\":\"Vue.createApp({\\n  data() {\\n    return {\\n      checked: false\\n    }\\n  }\\n}).mount('#v-model-checkbox')\",\"html_pre_processor\":\"none\",\"css_pre_processor\":\"none\",\"js_pre_processor\":\"none\",\"html_classes\":\"\",\"css_starter\":\"neither\",\"css_prefix_free\":null,\"css_external\":null,\"js_library\":null,\"js_modernizr\":null,\"js_external\":null,\"created_at\":\"2020-03-24T15:46:31.000Z\",\"updated_at\":\"2020-07-26T21:41:33.000Z\",\"session_hash\":null,\"title\":\"Handling forms: checkbox\",\"description\":\"\",\"slug_hash\":\"PoqyJVE\",\"head\":\"\",\"private\":false,\"has_animation\":false,\"css_pre_processor_lib\":\"\",\"checksum\":0,\"screenshot_uuid\":\"372ad709-2cb5-4cef-b623-bdcf1cd93242\",\"team_id\":1003,\"css_prefix\":\"neither\",\"template\":false,\"js_module\":null,\"pen_hash\":null}","__jwt":"eyJhbGciOiJIUzI1NiJ9.eyJjbGFpbXMiOnsidXNlcl9pZCI6MX0sImV4cCI6MTYzODA3NzU2N30.3fgMSauWML5RXlgnfj94Guqb-knT9Jd9aueHGWTkJe0","__processorsMap":{"autoprefixer":"autoprefixer-10","babel":"babel-7","coffeescript":"coffeescript-2","format-1":"format-1","flutter":"flutter-1","haml":"haml-4","less":"less-3","lint-1":"lint-1","livescript":"livescript-1","markdown":"markdown-11","postcss":"postcss-7","pug":"pug-2","sass":"sass-1","scss":"sass-1","sass-ruby-3":"sass-ruby-3","sass-ruby-compass-3":"sass-ruby-compass-3","slim":"slim-3","stylus":"stylus-0","typescript":"typescript-4","vue":"vue-2","vue3":"vue-3"},"__favicon_mask_icon":"https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg","__favicon_shortcut_icon":"https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico","__path_to_iframe_console_runner":"https://cpwebassets.codepen.io/assets/editor/iframe/iframeConsoleRunner-d8236034cc3508e70b0763f2575a8bb5850f9aea541206ce56704c013047d712.js","__path_to_iframe_refresh_css":"https://cpwebassets.codepen.io/assets/editor/iframe/iframeRefreshCSS-4793b73c6332f7f14a9b6bba5d5e62748e9d1bd0b5c52d7af6376f3d1c625d7e.js","__path_to_iframe_runtime_errors":"https://cpwebassets.codepen.io/assets/editor/iframe/iframeRuntimeErrors-4f205f2c14e769b448bcf477de2938c681660d5038bc464e3700256713ebe261.js","__path_to_processor_worker":"https://cpwebassets.codepen.io/assets/packs/router.js","__path_to_stop_execution_on_timeout":"https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js","__pen_normalize_css_url":"https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css","__pen_prefix_free_url":"https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js","__pen_reset_css_url":"https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"}</textarea>
+<script nonce="">
+    __editor_config = {"id":"classic","editors":[{"id":"html","type":"html","name":"HTML","showEditor":true,"showSettings":true,"showProcessors":true,"embeds":{"showViewCompiled":true},"settings":[{"id":"processor","name":"HTML Preprocessor","type":"select","visible":true,"values":[{"id":"none","name":"None","value":"none","default":true},{"id":"haml","name":"Haml","value":"haml"},{"id":"markdown","name":"Markdown","value":"markdown"},{"id":"slim","name":"Slim","value":"slim"},{"id":"pug","name":"Pug","value":"pug"}]},{"id":"html_classes","name":"Add Class(es) to \u003chtml\u003e","type":"input","placeholder":"e.g. single post post-1234","visible":true},{"id":"head","name":"Stuff for \u003chead\u003e","type":"textarea","placeholder":"e.g. \u003cmeta\u003e, \u003clink\u003e, \u003cscript\u003e","visible":true}],"actions":[{"id":"tidy_html","type":"tidy_code","name":"Format HTML","disabled_processors":["haml","slim"]},{"id":"view_compiled_html","type":"view_compiled","name":"View Compiled HTML","disabled_processors":["none"],"showInEmbeds":true},{"id":"analyze_html","type":"analyze","name":"Analyze HTML"},{"id":"maximize_html_editor","type":"maximize","name":"Maximize HTML Editor"},{"id":"minimize_html_editor","type":"minimize","name":"Minimize HTML Editor"},{"id":"fold_all_html","type":"fold_all","name":"Fold All"},{"id":"unfold_all_html","type":"unfold_all","name":"Unfold All"}],"processors":[{"id":"none","name":"None"},{"id":"haml","name":"Haml"},{"id":"markdown","name":"Markdown"},{"id":"slim","name":"Slim"},{"id":"pug","name":"Pug"}]},{"id":"css","type":"css","name":"CSS","showEditor":true,"showSettings":true,"showProcessors":true,"showVendorPrefixing":true,"embeds":{"showViewCompiled":true},"actions":[{"id":"tidy_css","type":"tidy_code","name":"Format CSS","disabled_processors":["sass","stylus"]},{"id":"view_compiled_css","type":"view_compiled","name":"View Compiled CSS","disabled_processors":["none"],"disabled_prefixes":["neither","prefixfree"]},{"id":"analyze_css","type":"analyze","name":"Analyze CSS"},{"id":"maximize_css_editor","type":"maximize","name":"Maximize CSS Editor"},{"id":"minimize_css_editor","type":"minimize","name":"Minimize CSS Editor"},{"id":"fold_all_css","type":"fold_all","name":"Fold All","disabled_processors":["sass"]},{"id":"unfold_all_css","type":"unfold_all","name":"Unfold All","disabled_processors":["sass"]}],"processors":[{"id":"none","name":"None"},{"id":"less","name":"Less"},{"id":"scss","name":"SCSS"},{"id":"sass","name":"Sass"},{"id":"stylus","name":"Stylus"},{"id":"postcss","name":"PostCSS"}],"parSuffixes":["less","scss","sass","styl"]},{"id":"js","type":"js","name":"JS","showEditor":true,"showSettings":true,"showProcessors":true,"detectImports":true,"externalResourcesHidden":false,"embeds":{"showViewCompiled":true},"actions":[{"id":"tidy_js","type":"tidy_code","name":"Format JavaScript","disabled_processors":["coffeescript, livescript"]},{"id":"view_compiled_js","type":"view_compiled","name":"View Compiled JavaScript","disabled_processors":["none"]},{"id":"analyze_js","type":"analyze","name":"Analyze JavaScript"},{"id":"maximize_js_editor","type":"maximize","name":"Maximize JavaScript Editor"},{"id":"minimize_js_editor","type":"minimize","name":"Minimize JavaScript Editor"},{"id":"fold_all_js","type":"fold_all","name":"Fold All"},{"id":"unfold_all_js","type":"unfold_all","name":"Unfold All"}],"processors":[{"id":"none","name":"None"},{"id":"babel","name":"Babel"},{"id":"typescript","name":"TypeScript"},{"id":"coffeescript","name":"CoffeeScript"},{"id":"livescript","name":"LiveScript"}]}],"formatters":[{"id":"classic","name":"Classic","runOn":[{"eventType":"demand"}],"url":"https://fi593g2v2a.execute-api.us-west-2.amazonaws.com/production/format"}],"layout":{"default":"top"},"linters":[{"id":"classic","name":"Classic","runOn":[{"eventType":"demand"}],"url":"https://fi593g2v2a.execute-api.us-west-2.amazonaws.com/production/lint"}],"preview":{"intervalMaxWaitMS":3500,"intervalMS":1200},"settings":[{"id":"details","name":"Pen Details","type":"setting"},{"id":"privacy","name":"Privacy","pro":true,"type":"setting"},{"id":"behavior","name":"Behavior","type":"setting"},{"id":"editor","name":"Editor","type":"setting"},{"id":"template","name":"Template","type":"setting"},{"id":"screenshot","name":"Screenshot","pro":true,"type":"setting"}]}
+    __processedPen = {"html":"&lt;div id=&quot;v-model-checkbox&quot; class=&quot;demo&quot;&gt;\n  &lt;input type=&quot;checkbox&quot; id=&quot;checkbox&quot; v-model=&quot;checked&quot; /&gt;\n  &lt;label for=&quot;checkbox&quot;&gt;{{ checked }}&lt;/label&gt;\n&lt;/div&gt;","css":".demo {\n  font-family: sans-serif;\n  border: 1px solid #eee;\n  border-radius: 2px;\n  padding: 20px 30px;\n  margin-top: 1em;\n  margin-bottom: 40px;\n  user-select: none;\n  overflow-x: auto;\n}","js":"Vue.createApp({\n  data() {\n    return {\n      checked: false };\n\n  } }).\nmount(&#39;#v-model-checkbox&#39;);"};
+    __preprocessors = {
+      "html": "none",
+      "css": "none",
+      "js": "none"
+    };
+    __preprocessorNames = {
+      "html": "HTML",
+      "css": "CSS",
+      "js": "JS"
+    };
+    __editable = true;
+    __embed_prefill = false;
+  </script>
+<script src="./embed-e369dee9e85a1a53638c341339102b70938d2f103a2252bc1bf4c7ec1dc26212.js"></script>
+<script src="./vendor-b5fdc983719cf9de7c76.chunk.js"></script>
+<script src="./1-5aea3376c72b9e442029.chunk.js"></script>
+<script src="./processorRouter-a4c0dca3a9e27d582a49.js"></script>
+<script src="./editable_embed-3b67e30214c3e45f7c55703c1b8b5cfcc058facecd3afc716f7c124f68bc5707.js"></script>
+
+
+</body></html>

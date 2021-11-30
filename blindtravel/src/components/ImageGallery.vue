@@ -1,19 +1,19 @@
 <template>
   <div>
     <div>
-      <div class="row">
+      <div class="grid-area">
         <router-link
           v-for="spot in imageSpots"
           :key="spot.ID"
-          class="col-md-2 col-sm-4 photo"
+          class="photo photo-container"
           :to="`/detail/${spot.ID}`"
         >
-          <div class="shadow title">
+          <div class="shadow title Noto-Serif">
             <p>{{ spot.Name }}</p>
             <p>{{ spot.City }}</p>
           </div>
           <img
-            class="img-thumbnail img-fluid"
+            class="pic"
             :src="spot.Picture.PictureUrl1"
             alt="spot.Picture.PictureDescription1"
           />
@@ -134,7 +134,6 @@ export default {
       this.getSpotImage();
     },
   },
-  careated() {},
   mounted() {
     if (this.updateCityImage) {
       this.getSpotImage();
@@ -146,7 +145,7 @@ export default {
       const axios = require("axios");
       //get random image
       if (vm.updateCityImage === "none") {
-        console.log("updateCityImage", vm.updateCityImage);
+        // console.log("updateCityImage", vm.updateCityImage);
 
         const allSpotsApi =
           "https://ptx.transportdata.tw/MOTC/v2/Tourism/ScenicSpot?$top=200&$format=JSON";
@@ -251,6 +250,13 @@ export default {
 };
 </script>
 <style scoped>
+.grid-area {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 3px;
+  margin-top: 65px;
+}
+
 .col-md-2 {
   padding: 0;
 }
@@ -260,6 +266,7 @@ export default {
 .photo:hover > img {
   filter: blur(2px) grayscale(90%);
   transition: 0.3s;
+  object-fit: cover;
 }
 .photo {
   position: relative;
@@ -277,13 +284,13 @@ export default {
 .title {
   display: none;
   position: absolute;
-  font-family: "Noto Serif TC", serif;
+  top: 30%;
   color: rgb(247, 240, 230);
   z-index: 99;
 }
 
 .title p:first-child {
-  font-size: 2em;
+  font-size: 1.2em;
   letter-spacing: 3.2px;
   text-align: center;
 }
@@ -293,10 +300,48 @@ export default {
   text-align: center;
   margin: 0;
 }
-
-@media (min-width: 768px) {
+.photo-container {
+  width: 100%;
+  height: 0;
+  padding: 0;
+  padding-bottom: 45%;
+  margin: 0;
+}
+.pic {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 5px;
+}
+@media (max-width: 576px) {
+  .grid-area {
+    grid-template-columns: 1fr;
+    grid-gap: 2px;
+    margin-top: 65px;
+  }
+  .title {
+    top: 30%;
+  }
   .title p:first-child {
-    font-size: 1.3em;
+    font-size: 1.8em;
+    letter-spacing: 3.2px;
+    text-align: center;
+  }
+  .title p:last-child {
+    font-size: 0.8em;
+  }
+}
+@media (min-width: 1024px) {
+  .grid-area {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 3px;
+    margin-top: 90px;
+  }
+  .title p:first-child {
+    font-size: 1.1em;
     letter-spacing: 3.2px;
     text-align: center;
   }
