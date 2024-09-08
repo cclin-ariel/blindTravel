@@ -131,9 +131,6 @@ export default {
         .then((response) => {
           [vm.spot] = response.data;
           vm.tempCity = vm.spot.City;
-          // console.log(vm.tempCity);
-
-          // console.log("getdetailByID", vm.spot);
         })
         .catch(function (error) {
           console.log(error);

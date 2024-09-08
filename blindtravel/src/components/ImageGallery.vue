@@ -15,18 +15,17 @@
           <img
             class="pic"
             :src="spot.Picture.PictureUrl1"
-            alt="spot.Picture.PictureDescription1"
+            :alt="spot.Picture.PictureDescription1"
           />
         </router-link>
       </div>
     </div>
     <div :class="{ hidden: !isLoading }" class="d-flex justify-content-center">
-      <div class="spinner-border text-secondary m-5" role="status">
-        <span class=""></span>
-      </div>
+      <div class="spinner-border text-secondary m-5" role="status"></div>
     </div>
   </div>
 </template>
+
 <script>
 import jsSHA from "jssha";
 export default {
@@ -127,6 +126,7 @@ export default {
         },
       ],
       enCity: "",
+      skip: 0,
     };
   },
   watch: {
@@ -148,7 +148,7 @@ export default {
         // console.log("updateCityImage", vm.updateCityImage);
 
         const allSpotsApi =
-          "https://ptx.transportdata.tw/MOTC/v2/Tourism/ScenicSpot?$top=200&$format=JSON";
+          "https://ptx.transportdata.tw/MOTC/v2/Tourism/ScenicSpot?$top=300&$format=JSON";
         axios
           .get(allSpotsApi, {
             headers: vm.getAuthorizationHeader(),
@@ -249,31 +249,36 @@ export default {
   },
 };
 </script>
+
 <style scoped>
 .grid-area {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 3px;
-  margin-top: 65px;
+  margin-top: 80px;
 }
 
 .col-md-2 {
   padding: 0;
 }
+
 .photo:hover > .title {
   display: block;
 }
+
 .photo:hover > img {
   filter: blur(2px) grayscale(90%);
   transition: 0.3s;
   object-fit: cover;
 }
+
 .photo {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .photo > img {
   object-fit: cover;
   max-height: 241px;
@@ -287,6 +292,7 @@ export default {
   top: 30%;
   color: rgb(247, 240, 230);
   z-index: 99;
+  text-shadow: 1px 1px 2px #6c757d;
 }
 
 .title p:first-child {
@@ -294,12 +300,14 @@ export default {
   letter-spacing: 3.2px;
   text-align: center;
 }
+
 .title p:last-child {
   font-size: 0.1em;
   letter-spacing: 1.6px;
   text-align: center;
   margin: 0;
 }
+
 .photo-container {
   width: 100%;
   height: 0;
@@ -307,6 +315,7 @@ export default {
   padding-bottom: 45%;
   margin: 0;
 }
+
 .pic {
   position: absolute;
   top: 0;
@@ -315,11 +324,11 @@ export default {
   left: 0;
   border-radius: 5px;
 }
+
 @media (max-width: 576px) {
   .grid-area {
     grid-template-columns: 1fr;
     grid-gap: 2px;
-    margin-top: 65px;
   }
   .title {
     top: 30%;
@@ -330,15 +339,15 @@ export default {
     text-align: center;
   }
   .title p:last-child {
-    font-size: 0.8em;
+    font-size: 1.1em;
   }
 }
+
 @media (min-width: 1024px) {
   .grid-area {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-gap: 3px;
-    margin-top: 90px;
   }
   .title p:first-child {
     font-size: 1.1em;

@@ -187,9 +187,6 @@ export default {
       ],
     };
   },
-  mounted() {
-    console.log(this.$route.name);
-  },
   methods: {
     updateValue(e) {
       this.city = e.target.value;
@@ -213,6 +210,9 @@ export default {
 };
 </script>
 <style scoped>
+.search-bar{
+  margin-top: 8px;
+}
 nav p {
   font-size: 10px;
 }

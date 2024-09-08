@@ -7,8 +7,8 @@ import jsSHA from "jssha";
 import axios from "axios";
 import VueAxios from "vue-axios";
 
-
 import "./assets/all.scss";
 
-
-createApp(App).use(router, VueAxios, axios, jsSHA).mount("#app");
+createApp(App)
+  .use(router, VueAxios, axios, jsSHA)
+  .mount("#app");
